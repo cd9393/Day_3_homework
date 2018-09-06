@@ -55,20 +55,10 @@ users = {
         :species => "snake"
       }
     ]
-  },
-  Craig: {
-    twitter: "fhfhfjc",
-    lottery_numbers: [12,3,21,5,3,4],
-    home_town: "Glasgow",
-    pets: [
-      {
-        name: "Mischa",
-        species: "Dog"
-      }
-    ]
   }
+
 }
-p users
+
 
 # 1. Get Jonathan's Twitter handle (i.e. the string `"jonnyt"`)
 # 2. Get Erik's hometown
@@ -94,8 +84,29 @@ p users["Erik"][:lottery_numbers].min
 avril_lot_num = users["Avril"][:lottery_numbers]
 p avril_lot_num.keep_if{|x| x % 2 == 0}
 
+result = []        # This is how it should have been done using what was learned in class.
+for number in avril_lot_num
+  if number % 2 == 0
+    result << number
+  end
+end
+p result
+
 users["Erik"][:lottery_numbers].push(7)
 
 users["Erik"][:home_town] = "Edinburgh"
 
 users["Erik"][:pets].push({name: "Fluffy", species: "Dog"})
+
+users[:Craig] ={twitter: "fhfhfjc",
+lottery_numbers: [12,3,21,5,3,4],
+home_town: "Glasgow",
+pets: [
+  {
+    name: "Mischa",
+    species: "Dog"
+  }
+]
+  }
+
+p users

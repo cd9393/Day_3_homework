@@ -18,7 +18,7 @@ stops.index("Linlithgow")
 stops.delete("Livingston")
 stops.delete_at(1)
 stops.count
-2
+3 
 stops.reverse!
 for stop in stops
   p stop
