@@ -13,11 +13,6 @@ united_kingdom = [
     name: "England",
     population: 53010000,
     capital: "London"
-  },
-  {
-    name: "Northern Ireland",
-    population: 1811000,
-    capital: "Belfast"
   }
 ]
 
@@ -27,6 +22,13 @@ united_kingdom = [
 # 4. Use a loop to find the total population of the UK.
 
 united_kingdom[1][:capital] = "Cardiff"
+
+united_kingdom.push(  {
+    name: "Northern Ireland",
+    population: 1811000,
+    capital: "Belfast"
+  })
+  p united_kingdom
 
 for countries in united_kingdom
   p countries[:name]
